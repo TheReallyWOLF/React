@@ -10,7 +10,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="addReadMe" />
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="ReactTemplate">
+      <change afterPath="$PROJECT_DIR$/Social/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Social/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,8 +46,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Social" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\React\Social" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -39,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598637692483</updated>
       <workItem from="1598637693551" duration="472000" />
-      <workItem from="1598639476738" duration="303000" />
+      <workItem from="1598639476738" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -55,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598637944967</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ReactTemplate">
+      <created>1598639969953</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598639969953</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,13 +107,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111" />
     <MESSAGE value="addReadMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="addReadMe" />
+    <MESSAGE value="ReactTemplate" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReactTemplate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598637946198">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598639974756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598637946198" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598639974756" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598637896570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
