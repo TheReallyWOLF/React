@@ -1,4 +1,5 @@
 import React from 'react'; // подключение модуля
+import './Header.css'; // Стили для компонента
 
 const Header = () => {
     return (

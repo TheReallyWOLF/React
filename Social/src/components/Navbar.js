@@ -1,21 +1,22 @@
 import React from 'react';
+import './Navbar.css'; // Стили для компонента
 
 const Navbar = () => {
     return (
         <nav className='nav'>
-            <div>
+            <div className='item'>
                 <a>Profile</a>
             </div>
-            <div>
+            <div className='item'>
                 <a>Messages</a>
             </div>
-            <div>
+            <div className='item'>
                 <a>News</a>
             </div>
-            <div>
+            <div className='item'>
                 <a>Music</a>
             </div>
-            <div>
+            <div className='item'>
                 <a>Settings</a>
             </div>
         </nav>
