@@ -10,15 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="first step">
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Profile.css" afterDir="false" />
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="Компоненты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social/src/components/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +62,7 @@
       <updated>1598637692483</updated>
       <workItem from="1598637693551" duration="472000" />
       <workItem from="1598639476738" duration="1252000" />
-      <workItem from="1598701811671" duration="1191000" />
+      <workItem from="1598701811671" duration="3075000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -101,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598640631691</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Компоненты">
+      <created>1598703070431</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598703070431</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,13 +130,18 @@
     <MESSAGE value="ReactTemplate" />
     <MESSAGE value="Social" />
     <MESSAGE value="first step" />
-    <option name="LAST_COMMIT_MESSAGE" value="first step" />
+    <MESSAGE value="Компоненты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Компоненты" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598640632659">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598703071839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598640632659" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598703071839" />
+    <state x="1136" y="127" width="585" height="801" key="find.popup" timestamp="1598704180938">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1136" y="127" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598704180938" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598637896570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

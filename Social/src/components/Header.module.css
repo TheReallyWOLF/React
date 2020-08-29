@@ -1,5 +1,7 @@
 .header{
     grid-area: h;
+}
+.header2 {
     background-color: green;
 }
 
