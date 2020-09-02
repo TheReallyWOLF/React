@@ -1,0 +1,13 @@
+.item{
+    color: yellow;
+}
+
+.imageProfile {
+    width: 200px;
+    height: 100px;
+}
+
+.item img{
+    width: 60px;
+    border-radius: 30px;
+}
