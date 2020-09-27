@@ -43,16 +43,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\React\Social\src\components\Profile" />
-      <recent name="F:\React\Social\src\components\Navbar" />
-      <recent name="F:\React\Social\src\components\Header" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\React\Social\src\components\Profile\MyPosts\Post" />
       <recent name="F:\React\Social\src\components\Profile\MyPosts" />
       <recent name="F:\React\Social\src" />
       <recent name="F:\React\Social" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\React\Social\src\components\Profile" />
+      <recent name="F:\React\Social\src\components\Navbar" />
+      <recent name="F:\React\Social\src\components\Header" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -73,7 +73,7 @@
       <workItem from="1599060625414" duration="2942000" />
       <workItem from="1601109302233" duration="8000" />
       <workItem from="1601214656097" duration="37000" />
-      <workItem from="1601214811855" duration="754000" />
+      <workItem from="1601214811855" duration="3533000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599063557058</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="post">
+      <created>1601215686744</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601215686744</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599063558315">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601215688036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599063558315" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601215688036" />
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
