@@ -10,14 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/Post/MyPost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/Post/MyPost.module.css" afterDir="false" />
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/Post/MyPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/Post/MyPost.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,10 @@
       <workItem from="1598721549140" duration="164000" />
       <workItem from="1598722566155" duration="214000" />
       <workItem from="1598945791660" duration="258000" />
-      <workItem from="1599060625414" duration="2919000" />
+      <workItem from="1599060625414" duration="2942000" />
+      <workItem from="1601109302233" duration="8000" />
+      <workItem from="1601214656097" duration="37000" />
+      <workItem from="1601214811855" duration="754000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599061710795</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="post">
+      <created>1599063557058</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599063557058</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,17 +172,18 @@
     <MESSAGE value="Компоненты" />
     <MESSAGE value="style" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="post" />
+    <option name="LAST_COMMIT_MESSAGE" value="post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598945882725">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599061713245">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599063558315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599061713245" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599063558315" />
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
