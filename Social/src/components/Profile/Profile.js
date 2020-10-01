@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts"; // Стили для компонент
 
 const Profile = () => {
     return (
-        <div className={profileModule.content}>
+        <div>
             <div>
                 <img className={profileModule.imageProfile} src="https://wallpapershome.ru/images/pages/pic_h/6472.jpg"/>
             </div>
