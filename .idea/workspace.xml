@@ -10,13 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="like">
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="dialogs">
+      <change afterPath="$PROJECT_DIR$/Social/src/components/Music/Music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/components/Music/Music.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/components/News/News.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Social/src/components/News/News.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Social/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Social/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +45,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Social/src/components/Profile/MyPosts/Post" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Social/src/components/News" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\React\Social\src\components\Profile\MyPosts\Post" />
-      <recent name="F:\React\Social\src\components\Profile\MyPosts" />
-      <recent name="F:\React\Social\src" />
-      <recent name="F:\React\Social" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\React\Social\src\components\Profile" />
       <recent name="F:\React\Social\src\components\Navbar" />
       <recent name="F:\React\Social\src\components\Header" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\React\Social\src\components\News" />
+      <recent name="F:\React\Social\src\components\Profile\MyPosts\Post" />
+      <recent name="F:\React\Social\src\components\Profile\MyPosts" />
+      <recent name="F:\React\Social\src" />
+      <recent name="F:\React\Social" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -79,7 +83,9 @@
       <workItem from="1601214656097" duration="37000" />
       <workItem from="1601214811855" duration="3643000" />
       <workItem from="1601394058500" duration="713000" />
-      <workItem from="1601546395572" duration="1319000" />
+      <workItem from="1601546395572" duration="2416000" />
+      <workItem from="1601623764180" duration="1808000" />
+      <workItem from="1601716175437" duration="3273000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -165,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601218846964</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dialogs">
+      <created>1601547757088</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1601547757088</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,25 +207,30 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="post" />
     <MESSAGE value="like" />
-    <option name="LAST_COMMIT_MESSAGE" value="like" />
+    <MESSAGE value="dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="dialogs" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1210" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601718795716">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1210" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601718795716" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598945882725">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601218847941">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601547758300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601218847941" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601547758300" />
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598705205517" />
-    <state x="1136" y="127" width="585" height="801" key="find.popup" timestamp="1598704180938">
+    <state x="1136" y="127" width="585" height="801" key="find.popup" timestamp="1601716637706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1136" y="127" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598704180938" />
+    <state x="1136" y="127" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601716637706" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598637896570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
