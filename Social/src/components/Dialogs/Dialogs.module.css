@@ -1,3 +1,20 @@
-.dialog{
-    color: aqua;
+.dialogWrapper{
+    color: #ba42ad;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialogsItems{
+    padding: 10px;
+}
+.dialogsItems .active{
+    color: yellow;
+}
+.dialogsItems .dialog{
+    padding: 10px;
+}
+.messageWrapper{
+    padding: 10px;
+}
+.messageWrapper .message{
+    padding: 10px;
 }
