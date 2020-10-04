@@ -10,8 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="links">
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="to">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +80,7 @@
       <workItem from="1601546395572" duration="2416000" />
       <workItem from="1601623764180" duration="1808000" />
       <workItem from="1601716175437" duration="4195000" />
+      <workItem from="1601799471657" duration="986000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -177,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601719759942</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="to">
+      <created>1601799747376</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1601799747376</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +218,8 @@
     <MESSAGE value="like" />
     <MESSAGE value="dialogs" />
     <MESSAGE value="links" />
-    <option name="LAST_COMMIT_MESSAGE" value="links" />
+    <MESSAGE value="to" />
+    <option name="LAST_COMMIT_MESSAGE" value="to" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1210" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601718795716">
@@ -219,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601719763042">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601799750106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601719763042" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601799750106" />
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
