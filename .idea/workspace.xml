@@ -13,8 +13,6 @@
     <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="routing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Navbar/Navbar.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,7 @@
       <workItem from="1601546395572" duration="2416000" />
       <workItem from="1601623764180" duration="1808000" />
       <workItem from="1601716175437" duration="4195000" />
-      <workItem from="1601799471657" duration="2064000" />
+      <workItem from="1601799471657" duration="3935000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601800577288</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="routing">
+      <created>1601801778499</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601801778499</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,10 +244,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601800578760">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601801780207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601800578760" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601801780207" />
     <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
