@@ -2,36 +2,39 @@ import React from "react";
 import dialogStyle from "./Dialogs.module.css";
 import {NavLink} from "react-router-dom";
 
+const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id;
+    return (
+        <div className={dialogStyle.dialog + ' ' + dialogStyle.active}>
+            <NavLink to={path}>
+                {props.name}
+            </NavLink>
+        </div>
+    )
+}
+
+const Message = (props) => {
+    return (
+        <div className={dialogStyle.message}>
+            {props.message}
+        </div>
+    )
+}
+
 const Dialogs = (props) => {
     return (
         <div className={dialogStyle.dialogWrapper}>
             <div className={dialogStyle.dialogsItems}>
-                <div className={dialogStyle.dialog + ' ' + dialogStyle.active}>
-                    <NavLink to="/dialogs/1">Уасиа</NavLink>
-                </div>
-                <div className={dialogStyle.dialog}>
-                    <NavLink to="/dialogs/2">Фиедиа</NavLink>
-                </div>
-                <div className={dialogStyle.dialog}>
-                    <NavLink to="/dialogs/3">Пашиа</NavLink>
-                </div>
-                <div className={dialogStyle.dialog}>
-                    <NavLink to="/dialogs/4">Крансоле</NavLink>
-                </div>
-                <div className={dialogStyle.dialog}>
-                    <NavLink to="/dialogs/5">Свитаа</NavLink>
-                </div>
+                <DialogItem name="Dima" id="1"/>
+                <DialogItem name="Yora" id="2"/>
+                <DialogItem name="Wolf" id="3"/>
+                <DialogItem name="Lissa" id="4"/>
+                <DialogItem name="Admin" id="5"/>
             </div>
             <div className={dialogStyle.messageWrapper}>
-                <div className={dialogStyle.message}>
-                    Ку!
-                </div>
-                <div className={dialogStyle.message}>
-                    Ку а рри
-                </div>
-                <div className={dialogStyle.message}>
-                    Пшел вон!
-                </div>
+                <Message message="Ку!"/>
+                <Message message="Ку а рри"/>
+                <Message message="Пшел вон!"/>
             </div>
         </div>
     )

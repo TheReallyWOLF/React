@@ -1,16 +1,12 @@
 import React from "react";
 import profileModule from './Profile.module.css';
-import MyPosts from "./MyPosts/MyPosts"; // Стили для компонента
+import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo"; // Стили для компонента
 
 const Profile = () => {
     return (
         <div>
-            <div>
-                <img className={profileModule.imageProfile} src="https://wallpapershome.ru/images/pages/pic_h/6472.jpg"/>
-            </div>
-            <div>
-                <img className={profileModule.imageProfile} src="https://wallpapershome.ru/images/pages/pic_h/6472.jpg"/>
-            </div>
+            <ProfileInfo/>
             <MyPosts />
         </div>
     )

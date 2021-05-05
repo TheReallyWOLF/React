@@ -4,13 +4,21 @@ import Post from "./Post/MyPost"; // Стили для компонента
 
 const MyPosts = () => {
     return (
-        <div>
+        <div className={profileModule.postsBlock}>
+            <h3>My posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
-           <div>New post</div></div>
-           <Post message = 'Hi, how ate you?' like='2' disLike='10'/>
-           <Post message = 'It,s my first post!' like='12' disLike='3'/>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
+                <div>New post</div>
+            </div>
+            <div className={profileModule.posts}>
+                <Post message = 'Hi, how ate you?' like='2' disLike='10'/>
+                <Post message = 'It,s my first post!' like='12' disLike='3'/>
+            </div>
         </div>
     )
 }

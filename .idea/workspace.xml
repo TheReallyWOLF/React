@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="routing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/Social/src/components/Dialogs/Dialogs.js" afterDir="false" />
-    </list>
+    <list default="true" id="3ef7db9f-86c7-4c7d-9bd4-32791498ec0a" name="Default Changelist" comment="routing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,14 +30,17 @@
   <component name="ProjectId" id="1gjp7ya3EzKQw3AYrf9J3wCQVDj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Social/src/components/News" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react-base" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -80,6 +80,7 @@
       <workItem from="1601623764180" duration="1808000" />
       <workItem from="1601716175437" duration="4195000" />
       <workItem from="1601799471657" duration="3935000" />
+      <workItem from="1620124225300" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1598637803170</created>
@@ -234,31 +235,5 @@
     <MESSAGE value="to" />
     <MESSAGE value="routing" />
     <option name="LAST_COMMIT_MESSAGE" value="routing" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1210" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601718795716">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1210" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601718795716" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598945882725">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598945882725" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601801780207">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601801780207" />
-    <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598705205517">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1246" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598705205517" />
-    <state x="1136" y="127" width="585" height="801" key="find.popup" timestamp="1601716637706">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1136" y="127" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601716637706" />
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598637896570">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598637896570" />
   </component>
 </project>
