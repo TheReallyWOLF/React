@@ -22,19 +22,34 @@ const Message = (props) => {
 }
 
 const Dialogs = (props) => {
+
+    let dialogsData = [
+        {id: '1', name: 'Dima'},
+        {id: '2', name: 'Yora'},
+        {id: '3', name: 'Wolf'},
+        {id: '4', name: 'Lissa'},
+        {id: '5', name: 'Admin'}
+    ];
+
+    let messagesData = [
+        {id: '1', message: "Ку!"},
+        {id: '2', message: "Ку а рри"},
+        {id: '3', message: "Пшел вон!"},
+        {id: '4', message: "ДА!"},
+        {id: '5', message: "Нет!"}
+    ];
+// создает массив объектов с разметкой DialogItem
+    let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+// создает массив объектов с разметкой Message
+    let messagesElements = messagesData.map(message => <Message message={message.message}/>);
+
     return (
         <div className={dialogStyle.dialogWrapper}>
             <div className={dialogStyle.dialogsItems}>
-                <DialogItem name="Dima" id="1"/>
-                <DialogItem name="Yora" id="2"/>
-                <DialogItem name="Wolf" id="3"/>
-                <DialogItem name="Lissa" id="4"/>
-                <DialogItem name="Admin" id="5"/>
+                { dialogsElements }
             </div>
             <div className={dialogStyle.messageWrapper}>
-                <Message message="Ку!"/>
-                <Message message="Ку а рри"/>
-                <Message message="Пшел вон!"/>
+                { messagesElements }
             </div>
         </div>
     )
