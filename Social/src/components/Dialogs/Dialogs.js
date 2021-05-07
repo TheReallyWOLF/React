@@ -1,29 +1,11 @@
 import React from "react";
 import dialogStyle from "./Dialogs.module.css";
-import {NavLink} from "react-router-dom";
-
-const DialogItem = (props) => {
-    let path = "/dialogs/" + props.id;
-    return (
-        <div className={dialogStyle.dialog + ' ' + dialogStyle.active}>
-            <NavLink to={path}>
-                {props.name}
-            </NavLink>
-        </div>
-    )
-}
-
-const Message = (props) => {
-    return (
-        <div className={dialogStyle.message}>
-            {props.message}
-        </div>
-    )
-}
+import DialogItem from "./DialogItem/DialogsItem";
+import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-    let dialogsData = [
+/*    let dialogsData = [
         {id: '1', name: 'Dima'},
         {id: '2', name: 'Yora'},
         {id: '3', name: 'Wolf'},
@@ -37,11 +19,11 @@ const Dialogs = (props) => {
         {id: '3', message: "Пшел вон!"},
         {id: '4', message: "ДА!"},
         {id: '5', message: "Нет!"}
-    ];
+    ];*/
 // создает массив объектов с разметкой DialogItem
-    let dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+    let dialogsElements = props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 // создает массив объектов с разметкой Message
-    let messagesElements = messagesData.map(message => <Message message={message.message}/>);
+    let messagesElements = props.messagesData.map(message => <Message message={message.message}/>);
 
     return (
         <div className={dialogStyle.dialogWrapper}>
