@@ -11,6 +11,8 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 
 const App = (props) => { // App вставляется в index.js
+    let DialogsRender = () =>  <Dialogs dialogsData = { props.state.dialogsPage.dialogsData } messagesData={ props.state.dialogsPage.messagesData }/>;
+    let ProfileRender = () =>  <Profile postsData={ props.state.profilePage.postsData }/>;
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -22,10 +24,10 @@ const App = (props) => { // App вставляется в index.js
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>*/
-                    // что бы прокинуть пробсы надо писать по другому =>
+                    // что бы прокинуть пропсы надо писать по другому =>
                     }
-                    <Route path='/dialogs' render={ () =>  <Dialogs dialogsData = { props.dialogsData } messagesData={ props.messagesData }/> }/>
-                    <Route path='/profile' render={ () =>  <Profile /> }/>
+                    <Route path='/dialogs' render={ DialogsRender }/>
+                    <Route path='/profile' render={ ProfileRender }/>
                     <Route path='/news' render={ () => <News /> }/>
                     <Route path='/music' render={ () => <Music /> }/>
                     <Route path='/settings' render={ () => <Settings /> }/>

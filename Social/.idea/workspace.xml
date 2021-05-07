@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
       <workItem from="1620231659875" duration="4580000" />
       <workItem from="1620291457783" duration="612000" />
       <workItem from="1620325972775" duration="3697000" />
-      <workItem from="1620373707045" duration="2893000" />
+      <workItem from="1620373707045" duration="4532000" />
     </task>
     <task id="LOCAL-00001" summary="reset React">
       <created>1620244496831</created>
@@ -68,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620329065079</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="подготовка к редаксу">
+      <created>1620376868501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620376868502</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reset React" />
     <MESSAGE value="27" />
-    <option name="LAST_COMMIT_MESSAGE" value="27" />
+    <MESSAGE value="подготовка к редаксу" />
+    <option name="LAST_COMMIT_MESSAGE" value="подготовка к редаксу" />
   </component>
 </project>
