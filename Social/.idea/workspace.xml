@@ -6,8 +6,8 @@
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/render.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,8 @@
       <workItem from="1620291457783" duration="612000" />
       <workItem from="1620325972775" duration="3697000" />
       <workItem from="1620373707045" duration="5061000" />
-      <workItem from="1620497700049" duration="6005000" />
+      <workItem from="1620497700049" duration="6456000" />
+      <workItem from="1620731045548" duration="6606000" />
     </task>
     <task id="LOCAL-00001" summary="reset React">
       <created>1620244496831</created>
@@ -86,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620378866162</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FLUX архитектура">
+      <created>1620504799509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620504799509</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +117,7 @@
     <MESSAGE value="27" />
     <MESSAGE value="подготовка к редаксу" />
     <MESSAGE value="свое подобие редакса" />
-    <option name="LAST_COMMIT_MESSAGE" value="свое подобие редакса" />
+    <MESSAGE value="FLUX архитектура" />
+    <option name="LAST_COMMIT_MESSAGE" value="FLUX архитектура" />
   </component>
 </project>

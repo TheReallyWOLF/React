@@ -25,21 +25,28 @@ let state = {
             {id: '4', message: 'Hi, how ate you?', likeCount: '10', dislikeCount: '0'},
             {id: '5', message: 'It,s my first post!', likeCount: '5', dislikeCount: '2'}
         ],
+        newPostText: 'Введите сообщение'
     },
     sidebar: {}
 }
 
-export let addPost = (postMessage) => {
-    if (postMessage) {
+export let addPost = () => {
+    if (state.profilePage.newPostText) {
         let newPost = {
             id: state.profilePage.postsData[state.profilePage.postsData.length - 1].id + 1,
-            message: postMessage,
+            message: state.profilePage.newPostText,
             likeCount: 0,
             dislikeCount: 0
         };
         state.profilePage.postsData.push(newPost);
+        state.profilePage.newPostText = 'занулить';
         rerenderEntireTree(state);
     }
+}
+
+export let updateNewPostText = (newPostText) => {
+    state.profilePage.newPostText = newPostText;
+    rerenderEntireTree(state);
 }
 
 export default state;

@@ -13,7 +13,7 @@ import {addPost} from "./redux/state";
 
 const App = (props) => { // App вставляется в index.js
     let DialogsRender = () =>  <Dialogs dialogsData = { props.state.dialogsPage.dialogsData } messagesData={ props.state.dialogsPage.messagesData }/>;
-    let ProfileRender = () =>  <Profile postsData={ props.state.profilePage.postsData } addPost = { props.addPost }/>;
+    let ProfileRender = () =>  <Profile profilePage={ props.state.profilePage } addPost = { props.addPost }  updateNewPostText = { props.updateNewPostText }/>;
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
