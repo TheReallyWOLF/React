@@ -1,5 +1,4 @@
-import {rerenderEntireTree} from "../render";
-
+import React from "react";
 let state = {
     dialogsPage: {
         dialogsData: [
@@ -30,7 +29,11 @@ let state = {
     sidebar: {}
 }
 
-export let addPost = () => {
+let rerenderEntireTree = (state) => {
+    console.log('State changed')
+}
+
+export const addPost = () => {
     if (state.profilePage.newPostText) {
         let newPost = {
             id: state.profilePage.postsData[state.profilePage.postsData.length - 1].id + 1,
@@ -44,9 +47,13 @@ export let addPost = () => {
     }
 }
 
-export let updateNewPostText = (newPostText) => {
+export const updateNewPostText = (newPostText) => {
     state.profilePage.newPostText = newPostText;
     rerenderEntireTree(state);
+}
+
+export const subcribe = (observer) => {
+    rerenderEntireTree = observer;
 }
 
 export default state;
