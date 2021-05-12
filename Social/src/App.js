@@ -8,12 +8,11 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
-import {addPost} from "./redux/state";
 
 
 const App = (props) => { // App вставляется в index.js
     let DialogsRender = () =>  <Dialogs dialogsData = { props.state.dialogsPage.dialogsData } messagesData={ props.state.dialogsPage.messagesData }/>;
-    let ProfileRender = () =>  <Profile profilePage={ props.state.profilePage } addPost = { props.addPost }  updateNewPostText = { props.updateNewPostText }/>;
+    let ProfileRender = () =>  <Profile profilePage = { props.state.profilePage } addPost = { props.addPost }  updateNewPostText = { props.updateNewPostText }/>;
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
