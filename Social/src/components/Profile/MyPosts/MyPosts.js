@@ -6,11 +6,11 @@ const MyPosts = (props) => {
     let postsElements = props.profilePage.postsData.map(post => <Post message = {post.message} like={post.likeCount} disLike={post.dislikeCount}/>);
     let newPostElement = React.createRef();
     let addPost = () => {
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     }
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newPostText: text});
     }
 
     return (

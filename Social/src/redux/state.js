@@ -28,12 +28,16 @@ let store = {
         },
         sidebar: {}
     },
-    getState() {
-        return this._state;
-    },
     _callSubscriber() {
         console.log('State changed');
     },
+    subcribe(observer) {
+        this._callSubscriber = observer;
+    },
+    getState() {
+        return this._state;
+    },
+
     addPost() {
         if (this._state.profilePage.newPostText) {
             let newPost = {
@@ -51,8 +55,24 @@ let store = {
         this._state.profilePage.newPostText = newPostText;
         this._callSubscriber(this._state);
     },
-    subcribe(observer) {
-        this._callSubscriber = observer;
+    dispatch(action) { // { type: 'что сделать'}
+        if(action.type === 'ADD-POST'){
+            let flag = this._state.profilePage.newPostText;
+            if (flag) {
+                let newPost = {
+                    id: this._state.profilePage.postsData[this._state.profilePage.postsData.length - 1].id + 1,
+                    message: this._state.profilePage.newPostText,
+                    likeCount: 0,
+                    dislikeCount: 0
+                };
+                this._state.profilePage.postsData.push(newPost);
+                this._state.profilePage.newPostText = 'занулить';
+                this._callSubscriber(this._state);
+            }
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newPostText;
+            this._callSubscriber(this._state);
+        }
     }
 }
 
