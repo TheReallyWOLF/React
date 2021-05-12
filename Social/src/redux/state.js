@@ -37,24 +37,6 @@ let store = {
     getState() {
         return this._state;
     },
-
-    addPost() {
-        if (this._state.profilePage.newPostText) {
-            let newPost = {
-                id: this._state.profilePage.postsData[this._state.profilePage.postsData.length - 1].id + 1,
-                message: this._state.profilePage.newPostText,
-                likeCount: 0,
-                dislikeCount: 0
-            };
-            this._state.profilePage.postsData.push(newPost);
-            this._state.profilePage.newPostText = 'занулить';
-            this._callSubscriber(this._state);
-        }
-    },
-    updateNewPostText(newPostText) {
-        this._state.profilePage.newPostText = newPostText;
-        this._callSubscriber(this._state);
-    },
     dispatch(action) { // { type: 'что сделать'}
         if(action.type === 'ADD-POST'){
             let flag = this._state.profilePage.newPostText;
