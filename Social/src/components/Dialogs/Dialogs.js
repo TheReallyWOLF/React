@@ -2,7 +2,7 @@ import React from "react";
 import dialogStyle from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/state";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogsReducer";
 
 const Dialogs = (props) => {
 // ссылка на компонент (обычно надо избегать такой записи и использовать event.target.value)
