@@ -11,8 +11,13 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 
 const App = (props) => { // App вставляется в index.js
-    let DialogsRender = () =>  <Dialogs dialogsData = { props.state.dialogsPage.dialogsData } messagesData={ props.state.dialogsPage.messagesData }/>;
-    let ProfileRender = () =>  <Profile profilePage = { props.state.profilePage } dispatch = { props.dispatch }/>;
+    let DialogsRender = () =>  <Dialogs dispatch = { props.dispatch }
+                                        dialogsPage = { props.state.dialogsPage }
+                                        dialogsData = { props.state.dialogsPage.dialogsData }
+                                        messagesData={ props.state.dialogsPage.messagesData }/>;
+    let ProfileRender = () =>  <Profile dispatch = { props.dispatch }
+                                        profilePage = { props.state.profilePage }/>;
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
