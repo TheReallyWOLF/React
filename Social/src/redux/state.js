@@ -1,3 +1,7 @@
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+import sideBarReducer from "./sideBarReducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
@@ -38,54 +42,18 @@ let store = {
     _callSubscriber() {
         console.log('State changed');
     },
-    _addPost() {
-        if (this._state.profilePage.newPostText) {
-            let newPost = {
-                id: this._state.profilePage.postsData[this._state.profilePage.postsData.length - 1].id*1 + 1,
-                message: this._state.profilePage.newPostText,
-                likeCount: 0,
-                dislikeCount: 0
-            };
-            this._state.profilePage.postsData.push(newPost);
-            this._state.profilePage.newPostText = 'занулить';
-            this._callSubscriber(this._state);
-        }
-    },
-    _updateNewPostText(newPostText) {
-        this._state.profilePage.newPostText = newPostText;
-        this._callSubscriber(this._state);
-    },
-    _updateNewMessageText(newMessageText){
-        this._state.dialogsPage.newMessageText = newMessageText;
-        this._callSubscriber(this._state);
-    },
-    _addMessage(){
-        let newMessage = {
-            id: this._state.dialogsPage.messagesData[this._state.dialogsPage.messagesData.length - 1].id*1 + 1,
-            message: this._state.dialogsPage.newMessageText
-        };
-        this._state.dialogsPage.messagesData.push(newMessage);
-        this._state.dialogsPage.newMessageText = 'Пусто =)';
-        this._callSubscriber(this._state);
-    },
     subcribe(observer) {
         this._callSubscriber = observer;
     },
     getState() {
         return this._state;
     },
-    dispatch(action) { // { type: 'что сделать'}
-        if(action.type === ADD_POST){
-           this._addPost();
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._updateNewPostText(action.newPostText);
-        } else if(action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._updateNewMessageText(action.newMessageText);
-        }else if(action.type === SEND_MESSAGE) {
-            this._addMessage();
-        } else {
-            console.log(`${action.type} не существует`);
-        }
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.sidebar = sideBarReducer(this._state.sidebar, action);
+
+        this._callSubscriber(this._state);
     }
 }
 

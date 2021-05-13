@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34f99b58-05e4-4434-92b8-875b558a4f7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +25,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\webStorm\Progects\React\Social\src\redux" />
       <recent name="E:\webStorm\Progects\React\Social\src" />
       <recent name="E:\webStorm\Progects\React\Social\src\components\Dialogs\Message" />
       <recent name="E:\webStorm\Progects\React\Social\src\components\Dialogs\DialogItem" />
@@ -58,7 +56,7 @@
       <workItem from="1620497700049" duration="6456000" />
       <workItem from="1620731045548" duration="9973000" />
       <workItem from="1620810391133" duration="8756000" />
-      <workItem from="1620891020136" duration="8415000" />
+      <workItem from="1620891020136" duration="10913000" />
     </task>
     <task id="LOCAL-00001" summary="reset React">
       <created>1620244496831</created>
@@ -130,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620817551538</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="работа с самописным state.js&#10;велосипедим!">
+      <created>1620900947606</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620900947606</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +163,7 @@
     <MESSAGE value="подготовка к стор" />
     <MESSAGE value="велосипед (store redux)" />
     <MESSAGE value="dispatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="dispatch" />
+    <MESSAGE value="работа с самописным state.js&#10;велосипедим!" />
+    <option name="LAST_COMMIT_MESSAGE" value="работа с самописным state.js&#10;велосипедим!" />
   </component>
 </project>
