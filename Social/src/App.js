@@ -2,21 +2,17 @@ import React from 'react'; // подключение модуля
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Dialogs from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => { // App вставляется в index.js
-    let DialogsRender = () =>  <Dialogs dispatch = { props.dispatch }
-                                        dialogsPage = { props.state.dialogsPage }
-                                        dialogsData = { props.state.dialogsPage.dialogsData }
-                                        messagesData={ props.state.dialogsPage.messagesData }/>;
-    let ProfileRender = () =>  <Profile dispatch = { props.dispatch }
-                                        profilePage = { props.state.profilePage }/>;
+    let DialogsRender = () =>  <DialogsContainer store = { props.store }/>;
+    let ProfileRender = () =>  <Profile store = { props.store }/>;
 
     return (
         <BrowserRouter>
