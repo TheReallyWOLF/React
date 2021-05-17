@@ -1,4 +1,4 @@
-import React from 'react'; // подключение модуля
+import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
@@ -10,7 +10,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
-const App = (props) => { // App вставляется в index.js
+const App = (props) => {
     let DialogsRender = () =>  <DialogsContainer />;
     let ProfileRender = () =>  <Profile />;
 

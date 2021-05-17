@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from "./redux/reduxStore";
-import StoreContext, {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
@@ -16,9 +16,8 @@ let rerenderEntireTree = (state) => {
         document.getElementById('root')
     );
 }
-rerenderEntireTree(store.getState());
+rerenderEntireTree();
 store.subscribe(() => {
-    let state = store.getState();
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 });
 serviceWorker.unregister();
