@@ -26,12 +26,14 @@ const dialogsReducer = (state = initialState, action) => {
         return state;
     };
     const _addMessage = () => {
-        let newMessage = {
-            id: state.messagesData[state.messagesData.length - 1].id*1 + 1,
-            message: state.newMessageText
-        };
-        state.messagesData.push(newMessage);
-        state.newMessageText = 'Пусто =)';
+        if(state.newMessageText){
+            let newMessage = {
+                id: state.messagesData[state.messagesData.length - 1].id*1 + 1,
+                message: state.newMessageText
+            };
+            state.messagesData.push(newMessage);
+            state.newMessageText = 'Пусто =)';
+        }
         return state;
     };
 

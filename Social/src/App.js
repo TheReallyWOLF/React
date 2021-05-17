@@ -11,8 +11,8 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => { // App вставляется в index.js
-    let DialogsRender = () =>  <DialogsContainer store = { props.store }/>;
-    let ProfileRender = () =>  <Profile store = { props.store }/>;
+    let DialogsRender = () =>  <DialogsContainer />;
+    let ProfileRender = () =>  <Profile />;
 
     return (
         <BrowserRouter>
@@ -20,13 +20,6 @@ const App = (props) => { // App вставляется в index.js
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    {/*<Route path='/dialogs' component={Dialogs}/>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/settings' component={Settings}/>*/
-                    // что бы прокинуть пропсы надо писать по другому =>
-                    }
                     <Route path='/dialogs' render={ DialogsRender }/>
                     <Route path='/profile' render={ ProfileRender }/>
                     <Route path='/news' render={ () => <News /> }/>

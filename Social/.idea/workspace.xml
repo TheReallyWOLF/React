@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f99b58-05e4-4434-92b8-875b558a4f7e" name="Default Changelist" comment="">
+    <list default="true" id="0b1b2a88-4fad-460c-9d8d-58e55b360874" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Social.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Social.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/sideBarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sideBarReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,175 +27,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1s4GhTBdEjM7jHxYQNfiW5Q13Ux" />
+  <component name="ProjectId" id="1sfDolvLr0Se83oVIEbQlEhHSWB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="E:\webStorm\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\webStorm\Progects\React\Social\src\components\Dialogs" />
-      <recent name="E:\webStorm\Progects\React\Social\src\redux" />
-      <recent name="E:\webStorm\Progects\React\Social\src" />
-      <recent name="E:\webStorm\Progects\React\Social\src\components\Dialogs\Message" />
-      <recent name="E:\webStorm\Progects\React\Social\src\components\Dialogs\DialogItem" />
-    </key>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="34f99b58-05e4-4434-92b8-875b558a4f7e" name="Default Changelist" comment="" />
-      <created>1620124566421</created>
+      <changelist id="0b1b2a88-4fad-460c-9d8d-58e55b360874" name="Default Changelist" comment="" />
+      <created>1621254927433</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1620124566421</updated>
-      <workItem from="1620124567537" duration="845000" />
-      <workItem from="1620128662744" duration="2937000" />
-      <workItem from="1620223157899" duration="201000" />
-      <workItem from="1620231659875" duration="4580000" />
-      <workItem from="1620291457783" duration="612000" />
-      <workItem from="1620325972775" duration="3697000" />
-      <workItem from="1620373707045" duration="5061000" />
-      <workItem from="1620497700049" duration="6456000" />
-      <workItem from="1620731045548" duration="9973000" />
-      <workItem from="1620810391133" duration="8756000" />
-      <workItem from="1620891020136" duration="15041000" />
-      <workItem from="1621070198514" duration="9023000" />
+      <updated>1621254927433</updated>
+      <workItem from="1621254929235" duration="613000" />
+      <workItem from="1621263101444" duration="3370000" />
     </task>
-    <task id="LOCAL-00001" summary="reset React">
-      <created>1620244496831</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1620244496831</updated>
-    </task>
-    <task id="LOCAL-00002" summary="27">
-      <created>1620329065079</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1620329065079</updated>
-    </task>
-    <task id="LOCAL-00003" summary="подготовка к редаксу">
-      <created>1620376868501</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1620376868502</updated>
-    </task>
-    <task id="LOCAL-00004" summary="свое подобие редакса">
-      <created>1620378866162</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1620378866162</updated>
-    </task>
-    <task id="LOCAL-00005" summary="FLUX архитектура">
-      <created>1620504799509</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1620504799509</updated>
-    </task>
-    <task id="LOCAL-00006" summary="циклическая зависимость своя реализация подготовка к state">
-      <created>1620748762611</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1620748762611</updated>
-    </task>
-    <task id="LOCAL-00007" summary="подготовка к стор">
-      <created>1620758049933</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1620758049933</updated>
-    </task>
-    <task id="LOCAL-00008" summary="велосипед (store redux)">
-      <created>1620813964977</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1620813964977</updated>
-    </task>
-    <task id="LOCAL-00009" summary="dispatch">
-      <created>1620817516988</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1620817516988</updated>
-    </task>
-    <task id="LOCAL-00010" summary="dispatch">
-      <created>1620817551538</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1620817551538</updated>
-    </task>
-    <task id="LOCAL-00011" summary="работа с самописным state.js&#10;велосипедим!">
-      <created>1620900947606</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1620900947606</updated>
-    </task>
-    <task id="LOCAL-00012" summary="свой reducer">
-      <created>1620904169699</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1620904169699</updated>
-    </task>
-    <task id="LOCAL-00013" summary="свой reducer чистые функции">
-      <created>1620904342906</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1620904342906</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="reset React" />
-    <MESSAGE value="27" />
-    <MESSAGE value="подготовка к редаксу" />
-    <MESSAGE value="свое подобие редакса" />
-    <MESSAGE value="FLUX архитектура" />
-    <MESSAGE value="циклическая зависимость своя реализация подготовка к state" />
-    <MESSAGE value="подготовка к стор" />
-    <MESSAGE value="велосипед (store redux)" />
-    <MESSAGE value="dispatch" />
-    <MESSAGE value="работа с самописным state.js&#10;велосипедим!" />
-    <MESSAGE value="свой reducer" />
-    <MESSAGE value="свой reducer чистые функции" />
-    <option name="LAST_COMMIT_MESSAGE" value="свой reducer чистые функции" />
+    <option name="version" value="2" />
   </component>
 </project>
