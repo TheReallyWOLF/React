@@ -11,8 +11,8 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
 const App = (props) => {
-    let DialogsRender = () =>  <DialogsContainer />;
-    let ProfileRender = () =>  <Profile />;
+    let DialogsRender = () => <DialogsContainer/>;
+    let ProfileRender = () => <Profile/>;
 
     return (
         <BrowserRouter>
@@ -20,11 +20,11 @@ const App = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={ DialogsRender }/>
-                    <Route path='/profile' render={ ProfileRender }/>
-                    <Route path='/news' render={ () => <News /> }/>
-                    <Route path='/music' render={ () => <Music /> }/>
-                    <Route path='/settings' render={ () => <Settings /> }/>
+                    <Route path='/dialogs' render={DialogsRender}/>
+                    <Route path='/profile' render={ProfileRender}/>
+                    <Route path='/news' render={() => <News/>}/>
+                    <Route path='/music' render={() => <Music/>}/>
+                    <Route path='/settings' render={() => <Settings/>}/>
                 </div>
             </div>
         </BrowserRouter>

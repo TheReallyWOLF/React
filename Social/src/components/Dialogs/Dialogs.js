@@ -7,9 +7,9 @@ const Dialogs = (props) => {
 // ссылка на компонент (обычно надо избегать такой записи и использовать event.target.value)
     let newMessageElement = React.createRef();
 // создает массив объектов с разметкой DialogItem
-    let dialogsElements = props.dialogsPage.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+    let dialogsElements = props.dialogsPage.dialogsData.map(dialog => <DialogItem key = {dialog.id} name={dialog.name} id={dialog.id}/>);
 // создает массив объектов с разметкой Message
-    let messagesElements = props.dialogsPage.messagesData.map(message => <Message message={message.message}/>);
+    let messagesElements = props.dialogsPage.messagesData.map(message => <Message key = {message.id} message={message.message}/>);
 // изменить state при изменении поля
     let messageChange = () => {
         let message = newMessageElement.current.value;

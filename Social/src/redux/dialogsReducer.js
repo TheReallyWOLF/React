@@ -20,10 +20,11 @@ let initialState = {
 };
 
 const dialogsReducer = (state = initialState, action) => {
-
     const _updateNewMessageText = (newMessageText) => {
-        state.newMessageText = newMessageText;
-        return state;
+        return {
+            ...state,
+            newMessageText: newMessageText
+        };
     };
     const _addMessage = () => {
         if(state.newMessageText){
@@ -31,8 +32,11 @@ const dialogsReducer = (state = initialState, action) => {
                 id: state.messagesData[state.messagesData.length - 1].id*1 + 1,
                 message: state.newMessageText
             };
-            state.messagesData.push(newMessage);
-            state.newMessageText = 'Пусто =)';
+            return {
+                ...state,
+                newMessageText: 'Пусто =)',
+                messagesData: [...state.messagesData, newMessage]
+            };
         }
         return state;
     };

@@ -21,14 +21,19 @@ const profileReducer = (state = initialState, action) => {
                 likeCount: 0,
                 dislikeCount: 0
             };
-            state.postsData.push(newPost);
-            state.newPostText = 'занулить';
+            return {
+                ...state,
+                postsData: [...state.postsData, newPost],
+                newPostText: 'занулить'
+            };
         }
         return state;
     };
     const _updateNewPostText = (newPostText) => {
-        state.newPostText = newPostText;
-        return state;
+        return {
+            ...state,
+            newPostText: newPostText
+        };
     };
 
     switch (action.type) {

@@ -3,7 +3,7 @@ import profileModule from './MyPosts.module.css';
 import Post from "./Post/MyPost";
 
 const MyPosts = (props) => {
-    let postsElements = props.postsElements.map(post => <Post message = {post.message} like={post.likeCount} disLike={post.dislikeCount}/>);
+    let postsElements = props.postsElements.map(post => <Post key = {post.id} message = {post.message} like={post.likeCount} disLike={post.dislikeCount}/>);
     let addPost = () => {
         props.addPost();
     }
