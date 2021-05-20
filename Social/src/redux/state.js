@@ -1,7 +1,7 @@
 import profileReducer from "./profileReducer";
 import dialogsReducer from "./dialogsReducer";
 import sideBarReducer from "./sideBarReducer";
-
+// свой стор (велосипед) НЕ ИСПОЛЬЗУЕТСЯ!
 let store = {
     _state: {
         dialogsPage: {

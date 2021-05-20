@@ -1,39 +1,46 @@
 import React from "react";
-import styles from "./users.module.css"
+import styles from "./users.module.css";
+import axios from "axios";
 
+// Users заменена на классовую компоненту UsersClassComponent
 let Users = (props) => {
-    if (props.users.length === 0){
-        props.setUsers(
-            [
-                {id: '1', photoUrl: 'https://pechater.ru/wp-content/uploads/2019/08/foto-ot-pechaterfoto-vjcrdf-679x1024.jpg', isFollowed: false, fullName: 'Wolf', status: 'I am a Boss', location: {city: 'Paris', country: 'Fran'}},
-                {id: '2', photoUrl: 'https://pechater.ru/wp-content/uploads/2019/08/foto-ot-pechaterfoto-vjcrdf-679x1024.jpg', isFollowed: true, fullName: 'Wolf', status: 'I am a Boss', location: {city: 'Paris', country: 'Fran'}},
-                {id: '3', photoUrl: 'https://pechater.ru/wp-content/uploads/2019/08/foto-ot-pechaterfoto-vjcrdf-679x1024.jpg', isFollowed: false, fullName: 'Wolf', status: 'I am a Boss', location: {city: 'Paris', country: 'Fran'}},
-            ]
-        )
+    let getUsers = () => {
+        if (props.users.length === 0) {
+            axios.get("https://jsonplaceholder.typicode.com/users")
+                .then(response => {
+                    props.setUsers(response.data);
+                });
+        }
     }
+
     return (
         <div>
+            <button onClick={getUsers}>Get Users</button>
             {
-                props.users.map(user => <div key={user.id} >
+                props.users.map(user => <div key={user.id}>
                     <span>
                         <div>
                             <img src={user.photoUrl} alt="Фото" className={styles.userPhoto}/>
                         </div>
                         <div>
-                            { user.isFollowed ?
-                                <button onClick={() => {props.unfollow(user.id)}}>Unfollow</button> :
-                                <button onClick={() => {props.follow(user.id)}}>Follow</button>}
+                            {user.isFollowed ?
+                                <button onClick={() => {
+                                    props.unfollow(user.id)
+                                }}>Unfollow</button> :
+                                <button onClick={() => {
+                                    props.follow(user.id)
+                                }}>Follow</button>}
 
                         </div>
                     </span>
                     <span>
                         <span>
-                            <div>{user.fullName}</div>
-                            <div>{user.status}</div>
+                            <div>{user.name}</div>
+                            <div>{user.email}</div>
                         </span>
                         <span>
-                            <div>{user.location.country}</div>
-                            <div>{user.location.city}</div>
+                            <div>{user.address.street}</div>
+                            <div>{user.address.city}</div>
                         </span>
                     </span>
                 </div>)
