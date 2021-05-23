@@ -1,26 +1,31 @@
 import React from "react";
 import styles from "./users.module.css";
-import axios from "axios";
 
 // Users заменена на классовую компоненту UsersClassComponent
 let Users = (props) => {
-    let getUsers = () => {
-        if (props.users.length === 0) {
-            axios.get("https://jsonplaceholder.typicode.com/users")
-                .then(response => {
-                    props.setUsers(response.data);
-                });
-        }
+    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pages = [];
+    for (let i = 1; i <= pagesCount; i++) {
+        pages.push(i);
     }
-
     return (
         <div>
-            <button onClick={getUsers}>Get Users</button>
+            <div className={styles.wrapperSpan}>
+                {
+                    pages.map(page => {
+                        return <span onClick={() => {
+                            props.onPageChanged(page);
+                        }} className={props.currentPage === page && styles.selectedPage}>{page}</span>
+                    })
+                }
+            </div>
             {
                 props.users.map(user => <div key={user.id}>
                     <span>
                         <div>
-                            <img src={user.photoUrl} alt="Фото" className={styles.userPhoto}/>
+                            <img
+                                src={user.photos.small ? user.photos.small : 'https://n1s1.hsmedia.ru/fc/39/33/fc39337433e5e191dd4ecc22ad040fb7/600x600_1_759dfd7b6ed9b9a6cfe0fff51d2b257c@1080x1080_0xac120003_13481422031617037800.jpg'}
+                                alt="Фото" className={styles.userPhoto}/>
                         </div>
                         <div>
                             {user.isFollowed ?
@@ -36,11 +41,11 @@ let Users = (props) => {
                     <span>
                         <span>
                             <div>{user.name}</div>
-                            <div>{user.email}</div>
+                            <div>{user.id}</div>
                         </span>
                         <span>
-                            <div>{user.address.street}</div>
-                            <div>{user.address.city}</div>
+                            <div>{user.uniqueUrlName ? user.uniqueUrlName : 'нет ссылки'}</div>
+                            <div>{user.status ? user.status : 'нет статуса'}</div>
                         </span>
                     </span>
                 </div>)
