@@ -1,12 +1,12 @@
 import React from "react";
 import {connect} from "react-redux";
 import {
-    followActionCreator,
-    setUsersActionCreator,
-    unfollowActionCreator,
-    setCurrentPageActionCreator,
-    setTotalUsersCountActionCreator,
-    setIsUsersFetchingActionCreator
+    follow,
+    setUsers,
+    unfollow,
+    setCurrentPage,
+    setTotalUsersCount,
+    setIsUsersFetching
 } from "../../redux/usersReducer";
 import axios from "axios";
 import Users from "./Users";
@@ -30,10 +30,10 @@ class UsersClassComponent extends React.Component {
 
     _getUsers = (page = this.props.currentPage) => {
         if (this.props.users.length === 0 || page) {
-            this.props.setIsUsersFetchingActionCreator(true);
+            this.props.setIsUsersFetching(true);
             axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
                 .then(response => {
-                    this.props.setIsUsersFetchingActionCreator(false);
+                    this.props.setIsUsersFetching(false);
                     this.props.setUsers(response.data.items);
                     this.props.setTotalUsersCount(response.data.totalCount);
                 });
@@ -64,8 +64,8 @@ let mapStateToProps = (state) => {
         isUsersFetch: state.usersPage.isUsersFetch
     }
 };
-
-let mapDispatchToProps = (dispatch) => {
+// 1 вариант написания (устаревший)
+/*let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
             dispatch(followActionCreator(userId));
@@ -86,6 +86,26 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(setIsUsersFetchingActionCreator(isUsersFetch))
         }
     }
+}*/
+
+// 2 вариант написания (упрощенный) акшион креэйторы переименованы
+/*let mapDispatchToProps = {
+    follow: follow,
+    unfollow: unfollow,
+    setUsers: setUsers,
+    setCurrentPage: setCurrentPage,
+    setTotalUsersCount: setTotalUsersCount,
+    setIsUsersFetching: setIsUsersFetching
+}*/
+
+// Как писали раньше ВЫШЕ сейчас современный синтаксис позволяет писать так:
+let mapDispatchToProps = {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    setIsUsersFetching
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersClassComponent)
