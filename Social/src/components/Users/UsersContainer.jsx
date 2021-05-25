@@ -55,15 +55,6 @@ class UsersClassComponent extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => {
-    return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        isUsersFetch: state.usersPage.isUsersFetch
-    }
-};
 // 1 вариант написания (устаревший)
 /*let mapDispatchToProps = (dispatch) => {
     return {
@@ -106,6 +97,16 @@ let mapDispatchToProps = {
     setCurrentPage,
     setTotalUsersCount,
     setIsUsersFetching
-}
+};
+
+let mapStateToProps = (state) => {
+    return {
+        users: state.usersPage.users,
+        pageSize: state.usersPage.pageSize,
+        totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage,
+        isUsersFetch: state.usersPage.isUsersFetch
+    }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersClassComponent)
