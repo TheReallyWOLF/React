@@ -8,9 +8,9 @@ import {
     setTotalUsersCount,
     setIsUsersFetching
 } from "../../redux/usersReducer";
-import axios from "axios";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
+import {userAPI} from "../../api/api";
 
 class UsersClassComponent extends React.Component {
 // если конструктор ничего не делает кроме вызова super то можно его не писать
@@ -31,11 +31,11 @@ class UsersClassComponent extends React.Component {
     _getUsers = (page = this.props.currentPage) => {
         if (this.props.users.length === 0 || page) {
             this.props.setIsUsersFetching(true);
-            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
-                .then(response => {
+
+            userAPI.getUsers(page, this.props.pageSize).then(data => {
                     this.props.setIsUsersFetching(false);
-                    this.props.setUsers(response.data.items);
-                    this.props.setTotalUsersCount(response.data.totalCount);
+                    this.props.setUsers(data.items);
+                    this.props.setTotalUsersCount(data.totalCount);
                 });
         }
     }

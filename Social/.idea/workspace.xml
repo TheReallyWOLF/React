@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0b1b2a88-4fad-460c-9d8d-58e55b360874" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,11 @@
       <workItem from="1621938553848" duration="10839000" />
       <workItem from="1622010733951" duration="166000" />
       <workItem from="1622049331485" duration="1443000" />
-      <workItem from="1622053521276" duration="3170000" />
+      <workItem from="1622053521276" duration="3788000" />
+      <workItem from="1622106390846" duration="54000" />
+      <workItem from="1622106456358" duration="453000" />
+      <workItem from="1622106916689" duration="193000" />
+      <workItem from="1622134380475" duration="6701000" />
     </task>
     <task id="LOCAL-00001" summary="Redux">
       <created>1621267398296</created>
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621967011071</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="работа с cookie">
+      <created>1622056704562</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622056704562</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +189,8 @@
     <MESSAGE value="profile page, ajax, api" />
     <MESSAGE value="withRouter НОС" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="работа с cookie" />
+    <option name="LAST_COMMIT_MESSAGE" value="работа с cookie" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621272469228">
@@ -203,18 +213,18 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1613" y="145" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1621361276696" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1621967019062">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1622056711915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621967019062" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622056711915" />
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621799295063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621799295063" />
-    <state x="667" y="255" width="585" height="530" key="find.popup" timestamp="1621966957512">
+    <state x="667" y="255" width="585" height="530" key="find.popup" timestamp="1622136716364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="255" width="585" height="530" key="find.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621966957512" />
+    <state x="667" y="255" width="585" height="530" key="find.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1622136716364" />
     <state x="342" y="103" key="new project wizard" timestamp="1621497049717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
