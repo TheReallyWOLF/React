@@ -3,6 +3,7 @@ import styles from "./users.module.css";
 import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {userAPI} from "../../api/api";
+import {toggleFollowingProgress} from "../../redux/usersReducer";
 
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -33,21 +34,25 @@ let Users = (props) => {
                         </div>
                         <div>
                             {user.followed ?
-                                <button onClick={() => {
+                                <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
+                                    props.toggleFollowingProgress(true, user.id);
                                     userAPI.unfollow(user.id)
                                         .then(response => {
                                             if (response.data.resultCode === 0) {
                                                 props.unfollow(user.id);
                                             }
+                                            props.toggleFollowingProgress(false, user.id);
                                         });
                                     }
                                 }>Unfollow</button> :
-                                <button onClick={() => {
+                                <button disabled={props.followingInProgress.some(id => id === user.id)} onClick={() => {
+                                    props.toggleFollowingProgress(true, user.id);
                                     userAPI.follow(user.id)
                                         .then(response => {
                                             if (response.data.resultCode === 0) {
                                                 props.follow(user.id);
                                             }
+                                            props.toggleFollowingProgress(false, user.id);
                                         });
                                     }
                                 }>Follow</button>}

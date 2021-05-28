@@ -6,7 +6,7 @@ import {
     unfollow,
     setCurrentPage,
     setTotalUsersCount,
-    setIsUsersFetching
+    setIsUsersFetching, toggleFollowingProgress
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
@@ -44,13 +44,15 @@ class UsersClassComponent extends React.Component {
         return <>
             { this.props.isUsersFetch ? <Preloader/> : null }
             <Users totalUsersCount = {this.props.totalUsersCount}
-                      pageSize = {this.props.pageSize}
-                      currentPage = {this.props.currentPage}
-                      users = {this.props.users}
-                      unfollow = {this.props.unfollow}
-                      follow = {this.props.follow}
-                      isUsersFetch = {this.props.isUsersFetch}
-                      onPageChanged = {this._onPageChanged}/>
+                   pageSize = {this.props.pageSize}
+                   currentPage = {this.props.currentPage}
+                   users = {this.props.users}
+                   unfollow = {this.props.unfollow}
+                   follow = {this.props.follow}
+                   isUsersFetch = {this.props.isUsersFetch}
+                   followingInProgress = {this.props.followingInProgress}
+                   toggleFollowingProgress = {this.props.toggleFollowingProgress}
+                   onPageChanged = {this._onPageChanged}/>
         </>
     }
 }
@@ -96,7 +98,8 @@ let mapDispatchToProps = {
     setUsers,
     setCurrentPage,
     setTotalUsersCount,
-    setIsUsersFetching
+    setIsUsersFetching,
+    toggleFollowingProgress
 };
 
 let mapStateToProps = (state) => {
@@ -105,7 +108,8 @@ let mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        isUsersFetch: state.usersPage.isUsersFetch
+        isUsersFetch: state.usersPage.isUsersFetch,
+        followingInProgress: state.usersPage.followingInProgress
     }
 };
 
