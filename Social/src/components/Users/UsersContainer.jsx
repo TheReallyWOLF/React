@@ -2,15 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 import {
     follow,
-    setUsers,
     unfollow,
     setCurrentPage,
-    setTotalUsersCount,
-    setIsUsersFetching, toggleFollowingProgress
+    getUsersThunkCreator,
+    toggleFollowingProgress, unfollowThunkCreator, followThunkCreator
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
-import {userAPI} from "../../api/api";
 
 class UsersClassComponent extends React.Component {
 // если конструктор ничего не делает кроме вызова super то можно его не писать
@@ -30,13 +28,7 @@ class UsersClassComponent extends React.Component {
 
     _getUsers = (page = this.props.currentPage) => {
         if (this.props.users.length === 0 || page) {
-            this.props.setIsUsersFetching(true);
-
-            userAPI.getUsers(page, this.props.pageSize).then(data => {
-                    this.props.setIsUsersFetching(false);
-                    this.props.setUsers(data.items);
-                    this.props.setTotalUsersCount(data.totalCount);
-                });
+            this.props.getUsersThunkCreator(page, this.props.pageSize)
         }
     }
 
@@ -52,7 +44,10 @@ class UsersClassComponent extends React.Component {
                    isUsersFetch = {this.props.isUsersFetch}
                    followingInProgress = {this.props.followingInProgress}
                    toggleFollowingProgress = {this.props.toggleFollowingProgress}
-                   onPageChanged = {this._onPageChanged}/>
+                   onPageChanged = {this._onPageChanged}
+                   unfollowThunkCreator = {this.props.unfollowThunkCreator}
+                   followThunkCreator = {this.props.followThunkCreator}
+            />
         </>
     }
 }
@@ -93,13 +88,10 @@ class UsersClassComponent extends React.Component {
 
 // Как писали раньше ВЫШЕ сейчас современный синтаксис позволяет писать так:
 let mapDispatchToProps = {
-    follow,
-    unfollow,
-    setUsers,
     setCurrentPage,
-    setTotalUsersCount,
-    setIsUsersFetching,
-    toggleFollowingProgress
+    getUsersThunkCreator,
+    unfollowThunkCreator,
+    followThunkCreator
 };
 
 let mapStateToProps = (state) => {

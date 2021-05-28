@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    withCredentials: true,
+    withCredentials: true, // разрешить привязку cookie с запросом
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
     headers: {
         "API-KEY": "097c0e16-5799-473a-bca9-ec802ba216ad"
