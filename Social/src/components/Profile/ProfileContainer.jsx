@@ -1,20 +1,21 @@
 import React from "react";
 import Profile from "./Profile";
-import axios from "axios";
 import {connect} from "react-redux";
-import {setUserProfile} from "../../redux/profileReducer";
-import { withRouter } from "react-router-dom";
+import {getUserProfileThunkCreator} from "../../redux/profileReducer";
+import {Redirect, withRouter} from "react-router-dom";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        let userId = this.props.match.params.userId ? this.props.match.params.userId: '3';
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
-            .then(response => {
-                this.props.setUserProfile(response.data);
-            })
+        let userId = this.props.match.params.userId ? this.props.match.params.userId: '17240';
+        this.props.getUserProfileThunkCreator(userId);
     }
 
     render() {
+        if(!this.props.isAuth) {
+            // если не авторизован то верни на страницу авторизации
+            return <Redirect to={"/login"}/>
+        }
+
         return (
            <Profile { ...this.props } profile={ this.props.profile }/>
         )
@@ -22,12 +23,13 @@ class ProfileContainer extends React.Component {
 }
 
 let mapDispatchToProps = {
-    setUserProfile
+    getUserProfileThunkCreator
 };
 
 let mapStateToProps = (state) => {
     return {
-        profile: state.profilePage.profile
+        profile: state.profilePage.profile,
+        isAuth: state.auth.isAuth
     }
 };
 

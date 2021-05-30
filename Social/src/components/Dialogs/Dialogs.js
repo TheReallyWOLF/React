@@ -2,6 +2,7 @@ import React from "react";
 import dialogStyle from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogsItem";
 import Message from "./Message/Message";
+import {Redirect} from "react-router-dom";
 
 const Dialogs = (props) => {
 // ссылка на компонент (обычно надо избегать такой записи и использовать event.target.value)
@@ -18,6 +19,11 @@ const Dialogs = (props) => {
 // Добавить сообщение
     let addMessage = () => {
         props.addMessage();
+    }
+
+    if(!props.isAuth) {
+        // если не авторизован то верни на страницу авторизации
+        return <Redirect to={"/login"}/>
     }
 
     return (
