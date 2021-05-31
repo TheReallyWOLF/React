@@ -9,6 +9,8 @@ import {
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
+import {withAuthRedirect} from "../../hoc/withAuthRedirectComponent";
+import {compose} from "redux";
 
 class UsersClassComponent extends React.Component {
 // если конструктор ничего не делает кроме вызова super то можно его не писать
@@ -105,4 +107,7 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersClassComponent)
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect
+)(UsersClassComponent)
