@@ -7,22 +7,29 @@ const instance = axios.create({
         "API-KEY": "097c0e16-5799-473a-bca9-ec802ba216ad"
     }
 })
+// user API
 export const userAPI = {
     getUsers: (page = 1, pageSize = 10) => {
         return instance.get(`users?page=${page}&count=${pageSize}`)
-            .then(response => response.data)
+            .then(response => response.data);
     },
     follow: (userId) => {
-        return instance.post(`follow/${userId}`)
+        return instance.post(`follow/${userId}`);
     },
     unfollow: (userId) => {
-        return instance.delete(`follow/${userId}`)
+        return instance.delete(`follow/${userId}`);
     }
 };
-
+// user profile API
 export const profileAPI = {
     getProfile: (userId) => {
-        return  instance.get(`profile/${userId}`)
+        return  instance.get(`profile/${userId}`);
+    },
+    getUserStatus: (userId) => {
+        return instance.get(`profile/status/${userId}`);
+    },
+    updateStatus: (status) => {
+        return instance.put(`profile/status`, {status: status});
     }
 }
 

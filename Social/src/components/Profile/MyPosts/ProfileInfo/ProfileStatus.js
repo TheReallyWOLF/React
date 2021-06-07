@@ -2,25 +2,33 @@ import React from "react";
 import Preloader from "../../../Common/Preloader/Preloader";
 
 class ProfileStatus extends React.Component {
-// локальый стор
+// локальный стейт
     state = {
-        editMode: false
+        editMode: false,
+        status: this.props.status
     }
 
     activateEditMode() {
-        console.log(this.state.editMode); //false setState асинхронен
+        console.log(this.state.editMode); //false => setState асинхронен
         this.setState({
             editMode: true
         })
-        // запустить обноврление перерисовки КОСТЫЛЬ замена setState в крайних случаях
+        // запустить обноврление перерисовки КОСТЫЛЬ замена setState в крайних случаях если мы меняем стейт напрямую => this.state.editMode = trueopol
         //this.forceUpdate();
-        console.log(this.state.editMode); //false setState асинхронен
+        console.log(this.state.editMode); //false => setState асинхронен
     }
-    deactivateEditMode(){
+    deactivateEditMode = () => {
         this.setState({
             editMode: false
-        })
+        });
+        this.props.updateStatus(this.state.status);
     }
+    onStatusChange = (e) => {
+        this.setState({
+            status: e.currentTarget.value
+        });
+    }
+
     render() {
         if (!this.props.status){
             return <Preloader/>
@@ -28,13 +36,15 @@ class ProfileStatus extends React.Component {
         return (
             <div>
                 {!this.state.editMode &&
+                    /*старый подход bind(this)*/
                     <div>
-                        <span onDoubleClick={this.activateEditMode.bind(this)}>{this.props.status}</span>
+                        <span onDoubleClick={this.activateEditMode.bind(this)}>{this.props.status || "No status"}</span>
                     </div>
                 }
                 {this.state.editMode &&
+                    /*современный подход со стрелочными функциями и без bind(this)*/
                     <div>
-                        <input autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value={this.props.status}/>
+                        <input autoFocus={true} onChange={this.onStatusChange} onBlur={this.deactivateEditMode} value={this.state.status}/>
                     </div>
                 }
             </div>
