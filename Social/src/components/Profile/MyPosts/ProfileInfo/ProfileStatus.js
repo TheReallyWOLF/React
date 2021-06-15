@@ -28,11 +28,20 @@ class ProfileStatus extends React.Component {
             status: e.currentTarget.value
         });
     }
+    // prevProps - прошлый пропс до DidUpdate prevState - прошлый стейт до DidUpdate
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        // синхронизация стейта если какото из запросов выполнился раньше
+        if (prevProps.status !== this.props.status){
+            this.setState({
+                status: this.props.status
+            })
+        }
+    }
 
     render() {
-        if (!this.props.status){
+       /* if (!this.props.status){
             return <Preloader/>
-        }
+        }*/
         return (
             <div>
                 {!this.state.editMode &&
