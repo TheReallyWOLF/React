@@ -1,4 +1,4 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+//const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY'; // после подключения библиотеки redux-form нативный метод тригера изменений по нажатию не нужен он будет существовать под капотом в redux-form
 const SEND_MESSAGE = 'SEND_MESSAGE';
 
 let initialState = {
@@ -15,26 +15,24 @@ let initialState = {
         {id: '3', message: "Пшел вон!"},
         {id: '4', message: "ДА!"},
         {id: '5', message: "Нет!"}
-    ],
-    newMessageText: 'Введите сообщение'
+    ]
 };
 
 const dialogsReducer = (state = initialState, action) => {
-    const _updateNewMessageText = (newMessageText) => {
+/*    const _updateNewMessageText = (newMessageText) => {
         return {
             ...state,
             newMessageText: newMessageText
         };
-    };
-    const _addMessage = () => {
-        if(state.newMessageText){
+    };*/
+    const _addMessage = (newMessageBody) => {
+        if(newMessageBody){
             let newMessage = {
                 id: state.messagesData[state.messagesData.length - 1].id*1 + 1,
-                message: state.newMessageText
+                message: newMessageBody
             };
             return {
                 ...state,
-                newMessageText: 'Пусто =)',
                 messagesData: [...state.messagesData, newMessage]
             };
         }
@@ -42,16 +40,16 @@ const dialogsReducer = (state = initialState, action) => {
     };
 
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_BODY: return _updateNewMessageText(action.newMessageText);
-        case SEND_MESSAGE: return _addMessage();
+       // case UPDATE_NEW_MESSAGE_BODY: return _updateNewMessageText(action.newMessageText);
+        case SEND_MESSAGE: return _addMessage(action.newMessageBody);
         default: return state;
     }
 };
 
-export const addMessageActionCreator = () => ({type: SEND_MESSAGE});
-export const updateNewMessageTextActionCreator = (text) => ({
+export const addMessageActionCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody});
+/*export const updateNewMessageTextActionCreator = (text) => ({
     type: UPDATE_NEW_MESSAGE_BODY,
     newMessageText: text
-});
+});*/
 
 export default dialogsReducer;

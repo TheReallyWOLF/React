@@ -19,10 +19,10 @@ const Login = (props) => {
         </form>
    )
 }
-
+// оборачиваем в специальный объект для валидации (библиотека redux-form)
 const LoginReduxForm = reduxForm({
     form: 'login' // уникальносе строковое имя формы
-})(Login)
+})(Login);
 
 const LoginForm = (props) => {
     const onSubmit = (formData) => {

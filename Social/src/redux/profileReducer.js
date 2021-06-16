@@ -1,7 +1,6 @@
 import {profileAPI} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_USER_STATUS = 'SET_USER_STATUS';
 
@@ -14,32 +13,24 @@ let initialState = {
         {id: '5', message: 'It,s my first post!', likeCount: '5', dislikeCount: '2'}
     ],
     profile: null,
-    newPostText: 'Введите сообщение',
     status: ''
 };
 
 const profileReducer = (state = initialState, action) => {
-    const _addPost = () => {
-        if (state.newPostText) {
+    const _addPost = (newPostBody) => {
+        if (newPostBody) {
             let newPost = {
                 id: state.postsData[state.postsData.length - 1].id*1 + 1,
-                message: state.newPostText,
+                message: action.newPostBody,
                 likeCount: 0,
                 dislikeCount: 0
             };
             return {
                 ...state,
                 postsData: [...state.postsData, newPost],
-                newPostText: 'занулить'
             };
         }
         return state;
-    };
-    const _updateNewPostText = (newPostText) => {
-        return {
-            ...state,
-            newPostText: newPostText
-        };
     };
     const _setProfile = (profile) => {
         return {
@@ -55,19 +46,14 @@ const profileReducer = (state = initialState, action) => {
     };
 
     switch (action.type) {
-        case ADD_POST: return _addPost();
-        case UPDATE_NEW_POST_TEXT: return _updateNewPostText(action.newPostText);
+        case ADD_POST: return _addPost(action.newPostBody);
         case SET_USER_PROFILE: return _setProfile(action.profile);
         case SET_USER_STATUS: return _setUserStatus(action.status);
         default: return state;
     }
 };
 
-export const addPostActionCreator = () => ({type: ADD_POST});
-export const updateNewPostTextActionCreator = (text) => ({
-    type: UPDATE_NEW_POST_TEXT,
-    newPostText: text
-});
+export const addPostActionCreator = (newPostBody) => ({type: ADD_POST, newPostBody});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setUserStatus = (status) => ({type: SET_USER_STATUS, status});
 // Thunk
