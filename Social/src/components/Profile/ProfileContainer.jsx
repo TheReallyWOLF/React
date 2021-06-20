@@ -12,7 +12,7 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        let userId = this.props.match.params.userId ? this.props.match.params.userId: '17240';
+        let userId = this.props.match.params.userId ? this.props.match.params.userId: this.props.authorizedUserId;
         this.props.getUserProfileThunkCreator(userId);
         this.props.getUserStatusThunkCreator(userId);
     }
@@ -37,7 +37,9 @@ let mapDispatchToProps = {
 let mapStateToProps = (state) => {
     return {
         profile: state.profilePage.profile,
-        status: state.profilePage.status
+        status: state.profilePage.status,
+        authorizedUserId: state.isAuth.userId,
+        isAuth: state.isAuth.isAuth
     }
 };
 

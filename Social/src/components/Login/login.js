@@ -5,6 +5,7 @@ import {requiredField} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {loginThunkCreator} from "../../redux/authReducer";
 import {Redirect} from "react-router-dom";
+import FormControlStyles from "../Common/FormsControls/FormControls.module.css"
 
 const Login = (props) => {
     return (
@@ -29,6 +30,10 @@ const Login = (props) => {
                        name={"rememberMe"}
                        component={Input}/> remember me
             </div>
+            {/*общая ошибка формы которая будет появляется при неудачном запросе (библиотека redux-form присылает error который прописан в authReducer)*/}
+            {props.error && <div className={ FormControlStyles.formSummaryError }>
+                { props.error }
+            </div>}
             <div>
                 <button>Login</button>
             </div>

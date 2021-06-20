@@ -1,4 +1,5 @@
 import {headerAPI} from "../api/api";
+import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 
@@ -44,6 +45,13 @@ export const loginThunkCreator = (email, password, rememberMe) => {
             .then(response => {
                     if (response.data.resultCode === 0) {
                         dispatch(getAuthUserDataThunkCreator());
+                    } else {
+                        /* первый параметр форма второй параметр это имя пооля или общий ключ для формы _error куда будет выводится ошибка для пользователя*/
+                        // stopSubmit используется что бы сообщить валидации что запрос пришел с ошибкой
+                        let errorMessage = response.data.messages.length > 0 ? response.data.messages[0] : "Неправильное имя пользователя или пароль"
+                        let action = stopSubmit("login", {_error: errorMessage});
+                        // _error можно взять из ответа от сервера или забить значение
+                        dispatch(action);
                     }
                 }
             )
