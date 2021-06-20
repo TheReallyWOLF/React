@@ -1,17 +1,29 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
+import {Input} from "../Common/FormsControls/FormsControls";
+import {requiredField} from "../../utils/validators/validators";
 
 const Login = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field placeholder={"Login"} name={"login"} component={"input"}/>
+                <Field placeholder={"Login"}
+                       name={"login"}
+                       validate={[requiredField]}
+                       component={Input}
+                />
             </div>
             <div>
-                <Field placeholder={"Password"} name={"password"} component={"input"}/>
+                <Field placeholder={"Password"}
+                       name={"password"}
+                       validate={[requiredField]}
+                       component={Input}
+                />
             </div>
             <div>
-                <Field type={"checkbox"} name={"rememberMe"} component={"input"}/> remember me
+                <Field type={"checkbox"}
+                       name={"rememberMe"}
+                       component={Input}/> remember me
             </div>
             <div>
                 <button>Login</button>
@@ -21,7 +33,7 @@ const Login = (props) => {
 }
 // оборачиваем в специальный объект для валидации (библиотека redux-form)
 const LoginReduxForm = reduxForm({
-    form: 'login' // уникальносе строковое имя формы
+    form: 'login' // уникальное строковое имя формы
 })(Login);
 
 const LoginForm = (props) => {
