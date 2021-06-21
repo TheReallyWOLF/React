@@ -10,12 +10,20 @@ import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
 import {withAuthRedirect} from "../../hoc/withAuthRedirectComponent";
 import {compose} from "redux";
+import {
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsUsersFetch,
+    getPageSize,
+    getTotalUsersCount,
+    getUsers, getUsersHardSelector
+} from "../../redux/usersSelectors";
 
 class UsersClassComponent extends React.Component {
 // если конструктор ничего не делает кроме вызова super то можно его не писать
-    constructor(props) {
+    /*constructor(props) {
         super(props);
-    }
+    }*/
 
 // в этом методе жизненого цикла надо делать все запросы
     componentDidMount() {
@@ -94,8 +102,8 @@ let mapDispatchToProps = {
     unfollowThunkCreator,
     followThunkCreator
 };
-
-let mapStateToProps = (state) => {
+// без использования селекторов
+/*let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
         pageSize: state.usersPage.pageSize,
@@ -103,6 +111,19 @@ let mapStateToProps = (state) => {
         currentPage: state.usersPage.currentPage,
         isUsersFetch: state.usersPage.isUsersFetch,
         followingInProgress: state.usersPage.followingInProgress
+    }
+};*/
+// с использованием селекторов
+let mapStateToProps = (state) => {
+    return {
+        userHardSelector: getUsersHardSelector(state),
+
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isUsersFetch: getIsUsersFetch(state),
+        followingInProgress: getFollowingInProgress(state)
     }
 };
 
