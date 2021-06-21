@@ -19,8 +19,8 @@ export const getFollowingInProgress = (state) => {
     return state.usersPage.followingInProgress;
 };
 // сложные селекторы (селекторы с логикой) необходимо создавать через библиотеке reselect (что бы не создавать лишние перерисовки)
-export const getUsersHardSelector = createSelector([getUsers],
-    (users) => {
+export const getUsersHardSelector = createSelector([getUsers, getIsUsersFetch],
+    (users, isUsersFetch) => {
         return users.filter(user => true);
     }
 );
