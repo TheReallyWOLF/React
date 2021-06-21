@@ -28,7 +28,7 @@ export default authReducer;
 // Thunk
 export const getAuthUserDataThunkCreator = () => {
     return (dispatch) => {
-        headerAPI.getMe()
+        return headerAPI.getMe()
             .then(response => {
                     if (response.data.resultCode === 0) {
                         let {id, login, email} = response.data.data;

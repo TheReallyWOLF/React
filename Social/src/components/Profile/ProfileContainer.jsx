@@ -12,7 +12,14 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        let userId = this.props.match.params.userId ? this.props.match.params.userId: this.props.authorizedUserId;
+        let userId = this.props.match.params.userId;
+        if (!userId) {
+            userId = this.props.authorizedUserId;
+            if(!userId) {
+                // аппаратный редирект
+                this.props.history.push("/login");
+            }
+        }
         this.props.getUserProfileThunkCreator(userId);
         this.props.getUserStatusThunkCreator(userId);
     }
@@ -38,8 +45,8 @@ let mapStateToProps = (state) => {
     return {
         profile: state.profilePage.profile,
         status: state.profilePage.status,
-        authorizedUserId: state.isAuth.userId,
-        isAuth: state.isAuth.isAuth
+        authorizedUserId: state.auth.userId,
+        isAuth: state.auth.auth
     }
 };
 

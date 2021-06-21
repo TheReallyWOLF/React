@@ -1,11 +1,10 @@
 import React from "react";
 import {connect} from "react-redux";
 import {
-    follow,
-    unfollow,
     setCurrentPage,
     getUsersThunkCreator,
-    toggleFollowingProgress, unfollowThunkCreator, followThunkCreator
+    unfollowThunkCreator,
+    followThunkCreator
 } from "../../redux/usersReducer";
 import Users from "./Users";
 import Preloader from "../Common/Preloader/Preloader";
@@ -109,5 +108,5 @@ let mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps, mapDispatchToProps),
-    withAuthRedirect
+    //withAuthRedirect с юзеров не уходим если не залогинен
 )(UsersClassComponent)
