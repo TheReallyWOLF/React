@@ -1,6 +1,7 @@
 import React from "react";
 import Preloader from "../../../Common/Preloader/Preloader";
 
+//////////// старое представление без использования HOOK в данном проекте используется аналог с использованием HOOK ProfileStatusWithHooks
 class ProfileStatus extends React.Component {
 // локальный стейт
     state = {
