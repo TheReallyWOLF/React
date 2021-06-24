@@ -1,4 +1,6 @@
 import {userAPI} from "../api/api";
+import actions from "redux-form/lib/actions";
+import {updateObjectInArray} from "../utils/object-helpers";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -22,22 +24,12 @@ const usersReducer = (state = initialState, action) => {
         case FOLLOW:
             return {
                 ...state,
-                users: state.users.map(user => {
-                    if(user.id === action.userId){
-                        return {...user, followed: true}
-                    }
-                    return user;
-                })
+                users: updateObjectInArray(state.users, action.userId, "id", {followed: true})
             }
         case UNFOLLOW:
             return {
                 ...state,
-                users: state.users.map(user => {
-                    if(user.id === action.userId){
-                        return {...user, followed: false}
-                    }
-                    return user;
-            })
+                users: updateObjectInArray(state.users, action.userId, "id", {followed: false})
         }
         case SET_USERS: {
             return {...state, users: action.users}
@@ -60,6 +52,17 @@ const usersReducer = (state = initialState, action) => {
         default: return state;
     }
 };
+// простые функции позволяющая избежать дублирование кода
+const followUnfollowFlow = async (dispatch, userId, apiMethod, actionCreator) => {
+    dispatch(toggleFollowingProgress(true, userId));
+    let response = await apiMethod(userId);
+
+    if (response.data.resultCode === 0) {
+        dispatch(actionCreator(userId));
+    }
+    dispatch(toggleFollowingProgress(false, userId));
+}
+
 // action
 export const follow = (userId) => ({type: FOLLOW, userId});
 export const unfollow = (userId) => ({type: UNFOLLOW, userId});
@@ -70,40 +73,26 @@ export const setIsUsersFetching = (isUsersFetch) => ({type: TOGGLE_USERS_FETCH, 
 export const toggleFollowingProgress = (followingInProgress, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, followingInProgress, userId});
 // thunk
 export const getUsersThunkCreator = (page, pageSize) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(setIsUsersFetching(true));
 
-        userAPI.getUsers(page, pageSize).then(data => {
-            dispatch(setIsUsersFetching(false));
-            dispatch(setUsers(data.items));
-            dispatch(setTotalUsersCount(data.totalCount));
-        });
+        let data = await userAPI.getUsers(page, pageSize);
+
+        dispatch(setIsUsersFetching(false));
+        dispatch(setUsers(data.items));
+        dispatch(setTotalUsersCount(data.totalCount));
     }
 }
 
 export const followThunkCreator = (userId) => {
-    return (dispatch) => {
-        dispatch(toggleFollowingProgress(true, userId));
-        userAPI.follow(userId)
-            .then(response => {
-                if (response.data.resultCode === 0) {
-                    dispatch(follow(userId));
-                }
-                dispatch(toggleFollowingProgress(false, userId));
-            });
+    return async (dispatch) => {
+         followUnfollowFlow(dispatch, userId, userAPI.follow.bind(userAPI), follow)
     }
 }
 
 export const unfollowThunkCreator = (userId) => {
-    return (dispatch) => {
-        dispatch(toggleFollowingProgress(true, userId));
-        userAPI.unfollow(userId)
-            .then(response => {
-                if (response.data.resultCode === 0) {
-                    dispatch(unfollow(userId));
-                }
-                dispatch(toggleFollowingProgress(false, userId));
-            });
+    return async (dispatch) => {
+         followUnfollowFlow(dispatch, userId, userAPI.unfollow.bind(userAPI), unfollow)
     }
 }
 

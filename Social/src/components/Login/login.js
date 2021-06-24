@@ -1,38 +1,21 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
-import {Input} from "../Common/FormsControls/FormsControls";
+import {createField, Input} from "../Common/FormsControls/FormsControls";
 import {requiredField} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {loginThunkCreator} from "../../redux/authReducer";
 import {Redirect} from "react-router-dom";
 import FormControlStyles from "../Common/FormsControls/FormControls.module.css"
 
-const Login = (props) => {
+const Login = ({ handleSubmit ,error }) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field placeholder={"email"}
-                       name={"email"}
-                       validate={[requiredField]}
-                       component={Input}
-                />
-            </div>
-            <div>
-                <Field placeholder={"Password"}
-                       name={"password"}
-                       type={"password"}
-                       validate={[requiredField]}
-                       component={Input}
-                />
-            </div>
-            <div>
-                <Field type={"checkbox"}
-                       name={"rememberMe"}
-                       component={Input}/> remember me
-            </div>
+        <form onSubmit={handleSubmit}>
+            {createField("email", "email", [requiredField], Input )}
+            {createField("Password", "password", [requiredField], Input, {type: "password"} )}
+            {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me" )}
             {/*общая ошибка формы которая будет появляется при неудачном запросе (библиотека redux-form присылает error который прописан в authReducer)*/}
-            {props.error && <div className={ FormControlStyles.formSummaryError }>
-                { props.error }
+            {error && <div className={ FormControlStyles.formSummaryError }>
+                { error }
             </div>}
             <div>
                 <button>Login</button>

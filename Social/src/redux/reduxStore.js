@@ -1,22 +1,22 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import {reducer as formReducer} from "redux-form";
 
+import appReducer from "./appReducer";
+import authReducer from "./authReducer";
+import usersReducer from "./usersReducer";
+import thunkMiddleware from "redux-thunk";
 import dialogsReducer from "./dialogsReducer";
 import profileReducer from "./profileReducer";
 import sideBarReducer from "./sideBarReducer";
-import usersReducer from "./usersReducer";
-import authReducer from "./authReducer";
-import thunkMiddleware from "redux-thunk"
-import appReducer from "./appReducer";
 
 let reducers = combineReducers({
     app: appReducer,
-    dialogsPage: dialogsReducer,
-    profilePage: profileReducer,
+    auth: authReducer,
+    form: formReducer, // валидация форм библиотека (redux-form)
     sidebar: sideBarReducer,
     usersPage: usersReducer,
-    auth: authReducer,
-    form: formReducer // валидация форм библиотека (redux-form)
+    dialogsPage: dialogsReducer,
+    profilePage: profileReducer
 })
 /*
 * reducers - прими редюсеры
