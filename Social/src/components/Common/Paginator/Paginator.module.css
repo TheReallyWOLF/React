@@ -1,7 +1,20 @@
-.wrapperSpan span{
+.wrapperSpan {
+    margin: 10px;
+}
+
+.wrapperSpan span, button{
     cursor: pointer;
 }
 
+.page {
+    margin: 0 1px;
+    padding: 0 2px;
+    border: solid grey 1px;
+}
+
 .selectedPage{
+    margin: 0 1px;
+    padding: 0 2px;
+    border: solid red 1px;
     font-weight: bold;
 }

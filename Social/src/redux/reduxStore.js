@@ -1,4 +1,4 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import {reducer as formReducer} from "redux-form";
 
 import appReducer from "./appReducer";
@@ -22,8 +22,13 @@ let reducers = combineReducers({
 * reducers - прими редюсеры
 * applyMiddleware - прими и обрабатывай промежуточные слои (санки)
 * */
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+// подключил утилиту редакс дев тулс
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
+// без утилиты редакс дев тулс (дефолт)
+//let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-window.store = store;
+// свой дубль стора в глобальном объекте (не нужен существует ради дев проверок)
+window.__store__ = store;
 
 export default store;
