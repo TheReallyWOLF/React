@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b1b2a88-4fad-460c-9d8d-58e55b360874" name="Default Changelist" comment="refactor">
+    <list default="true" id="0b1b2a88-4fad-460c-9d8d-58e55b360874" name="Default Changelist" comment="пагинация">
+      <change afterPath="$PROJECT_DIR$/src/hoc/withSuspense.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Paginator/Paginator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Paginator/Paginator.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Common/Paginator/paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Paginator/paginator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -55,7 +53,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../IDEA/commerce" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -125,7 +123,7 @@
       <workItem from="1624560502253" duration="1406000" />
       <workItem from="1624605246475" duration="71000" />
       <workItem from="1624606813420" duration="3764000" />
-      <workItem from="1624612461865" duration="4295000" />
+      <workItem from="1624612461865" duration="7520000" />
     </task>
     <task id="LOCAL-00001" summary="Redux">
       <created>1621267398296</created>
@@ -330,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624548856576</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="пагинация">
+      <created>1624619578451</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1624619578451</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +377,8 @@
     <MESSAGE value="библиотека reselect" />
     <MESSAGE value="hook" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="пагинация" />
+    <option name="LAST_COMMIT_MESSAGE" value="пагинация" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622191842575">
@@ -391,10 +397,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1624548228521" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624605317683">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1624620232507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1624605317683" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1624620232507" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1622317439733" />
     <state x="769" y="240" key="RollbackChangesDialog" timestamp="1621800936003">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -404,10 +410,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1613" y="145" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1621361276696" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1624548858522">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1624619580792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1624548858522" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1624619580792" />
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622192608141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

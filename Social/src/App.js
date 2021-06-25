@@ -5,14 +5,23 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {Route} from "react-router-dom";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
+
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginForm from "./components/Login/login";
 import {connect} from "react-redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./components/Common/Preloader/Preloader";
+import {withSuspense} from "./hoc/withSuspense";
+// import ProfileContainer from "./components/Profile/ProfileContainer";
+//import DialogsContainer from "./components/Dialogs/DialogsContainer";
+// реализация ленивой загрузки
+const DialogsContainer = React.lazy(() => {
+    return import('./components/Dialogs/DialogsContainer');
+});
+const ProfileContainer = React.lazy(() => {
+    return import('./components/Profile/ProfileContainer');
+});
 
 
 class App extends React.Component {
@@ -24,8 +33,8 @@ class App extends React.Component {
         if (!this.props.initialized) {
             return <Preloader/>
         }
-        let DialogsRender = () => <DialogsContainer/>;
-        let ProfileRender = () => <ProfileContainer/>;
+        let DialogsRender = withSuspense(DialogsContainer);
+        let ProfileRender = withSuspense(ProfileContainer);
         let UsersRender = () => <UsersContainer/>;
         let LoginPage = () => <LoginForm/>;
 
